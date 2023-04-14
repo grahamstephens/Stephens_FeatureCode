@@ -7,7 +7,7 @@ This is the feature code for my feature - backend overhaul, improved functionali
 This code can primarily be found in the src/controller files. The schema for the user model used in the database can be found in the src/models.
 
 This part was subject to a code review that required an extensive overhaul of the auth system on my part. This is due to the changes found in src/controllers/user.service. I opted for different approaches to storing the user schema in the database. First by appending a random integer to the user's email, then by hashing the user's email. The latter change is preserved, for form's sake and for the fact that potentially storing someone's uky.edu email in unhashed form in a third-party database seems like poor practice.
-The code review was related to the lack of authentication that this actually provided. This led to the src/controllers/auth.controller that you see now with the login and signup endpoints. Now, hashing is used to generate a secret token for the user upon login. I could not think of a way to make hashing user data in the database extremely relevant to security and authentication, so I went with this instead.
+The code review was related to the lack of authentication that this actually provided. This led to the src/controllers/auth.controller that you see now with the login and signup endpoints. Now, hashing is used to generate a secret token for the user upon login. I could not think of a way to make hashing user data in the database extremely relevant to security and authentication, so I went with this instead. Main dependencies are passport and bcrypt.
 
 ## Socket Server
 
@@ -16,5 +16,9 @@ This is found in src/ServerApplication. The socket server was not my contributio
 ## Tests
 
 These are also present in the tests submission, but I also included them here for context.
+
+## Extra
+
+Let me know if you need any other code/want to look at some related features, or if I just forgot to include a dependency. I was focused on trying to highlight my feature in this epic, so I didn't include a bunch of the extra version control stuff. I'm also scared about doing a cross-merge of package-lock, where my version of it is about 20,000 lines.
 
 -- Graham
