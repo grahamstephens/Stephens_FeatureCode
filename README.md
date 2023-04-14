@@ -13,6 +13,10 @@ The code review was related to the lack of authentication that this actually pro
 
 This is found in src/ServerApplication. The socket server was not my contribution, that lied under Samyak and anonymous chat. I included it here for the queuing system. It is bare bones and tangential to my main epic, but I included it here since it was a feature that I discussed in the presentation. Currently, it simply adds the first available listener/venter. Which will probably be sufficient for real life purposes. There is a back-end prototype for dynamic queuing, but I didn't include it here since it's functionality hadn't been properly coordinated with the front-end team and data field delivery from their end. Even though this repo is in a vacuum and unrelated to the front-end code, I didn't want to include a feature that hadn't been properly stress-tested and coordinated with the other repos.
 
+## Error handling
+
+Forgot to add this until I reread the spec. Originally had it categorized as "somewhat unrelated" in my head. I've attached my API responses and other ways that the back-end responds to abnormalities. Not sure if that's exactly what you're looking for in error-handling. Let me know! I'm sure that I've got proper error-handling tucked somewhere in the back-end labrynthe if this doesn't cut it.
+
 ## Tests
 
 These are also present in the tests submission, but I also included them here for context.
